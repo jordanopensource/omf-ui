@@ -20,7 +20,7 @@ steps:
   - name: build
     image: plugins/docker
     settings:
-      repo: ohmyform/ui
+      repo: josaorg/omf-ui
       tags:
         - ${DRONE_COMMIT_SHA}
         - latest
