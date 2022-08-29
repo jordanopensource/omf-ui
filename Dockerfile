@@ -28,7 +28,7 @@ RUN addgroup --gid 9999 ohmyform && adduser -D --uid 9999 -G ohmyform ohmyform
 
 WORKDIR /app
 
-COPY --from=builder /usr/src/app /app
+COPY --from=builder --chown=ohmyform:ohmyform /usr/src/app /app
 
 ENV PORT=4000 \
   NODE_ENV=production
