@@ -24,7 +24,9 @@ const Index: NextPage = () => {
     if (router.pathname !== window.location.pathname) {
       let href = router.asPath
       const as = router.asPath
-      const possible = [/(\/form\/)[^/]+/i, /(\/admin\/forms\/)[^/]+/i, /(\/admin\/users\/)[^/]+/i]
+      const possible = [
+        /(\/form\/)[^/]+/i, /(\/admin\/forms\/)[^/]+/i, /(\/admin\/users\/)[^/]+/i,
+      ]
 
       possible.forEach((r) => {
         if (r.test(as)) {
