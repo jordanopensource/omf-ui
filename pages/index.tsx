@@ -24,9 +24,7 @@ const Index: NextPage = () => {
     if (router.pathname !== window.location.pathname) {
       let href = router.asPath
       const as = router.asPath
-      const possible = [
-        /(\/form\/)[^/]+/i, /(\/admin\/forms\/)[^/]+/i, /(\/admin\/users\/)[^/]+/i,
-      ]
+      const possible = [/(\/form\/)[^/]+/i, /(\/admin\/forms\/)[^/]+/i, /(\/admin\/users\/)[^/]+/i]
 
       possible.forEach((r) => {
         if (r.test(as)) {
@@ -68,12 +66,7 @@ const Index: NextPage = () => {
           textAlign: 'center',
         }}
       >
-        <img
-          alt={'OhMyForm'}
-          src={require('../assets/images/logo_white.png?resize&size=512')}
-          width={1608 / 4}
-          height={530 / 4}
-        />
+        <img alt={'OhMyForm'} src={require('../assets/images/logo_white.png?resize&size=512')} />
       </div>
 
       {status.error && (
